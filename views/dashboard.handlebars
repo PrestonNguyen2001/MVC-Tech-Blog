@@ -1,26 +1,27 @@
-<div class="row">
-  <div class="col-auto">
-    <h2><span>~</span>Welcome, {{username}}!<span>~</span></h2>
-  </div>
+<div class="welcome-text">
+
+  <h1><span>~</span>Welcome, {{username}}!<span>~</span></h1>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Blog:</h3>
 
-    <form class="form new-blog-form">
-      <div class="form-group">
-        <input class="form-input" type="text" id="blog-title" name="blog-title" placeholder="Blog Title" />
-      </div>
-      
-      <div class="form-group">
-        <textarea class="form-input" id="blog-desc" name="blog-desc" placeholder="Blog Content"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
+<section class="section new-blog">
+  <h2 class="text-center text-3xl my-7 font-semibold">Create a New Blog:</h2>
+    <div class="input-box">
+      <form id="new-blog-form" class="form new-blog-form">
+        <div class="form-group">
+          <input class="form-input" type="text" id="blog-title" name="blog-title" placeholder="Blog Title" />
+        </div>
+        
+        <div class="form-group">
+          <textarea class="form-input" id="blog-desc" name="blog-desc" placeholder="Blog Content"></textarea>
+        </div>
+        <div class="btn-box btns">
+          <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+      </form>
+
+    </div>
+</section>
 
   {{#if blogs.length}}
   <div class="col-md-6 blog-list">

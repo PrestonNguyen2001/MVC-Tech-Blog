@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-header>
+  <div class="container-fluid navBack">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggler>
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand navTitle" href="/">The Tech Blog</a>
+    <div class="d-flex align-items-center">
+      <button class="icon-btn theme-btn" aria-label="Switch theme" data-theme-toggler data-ripple>
+        <span class="material-symbols-outlined dark-icon" aria-hidden="true">dark_mode</span>
+        <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
+        <div class="state-layer"></div>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" data-navigation>
+      <div class="navigation-header">
+        <button class="icon-btn" aria-label="Close menu" data-ripple data-nav-toggler>
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+          <div class="state-layer"></div>
+        </button>
+        <a href="/" class="logo">MVC Tech Blog</a>
+      </div>
+      <ul class="navbar-list navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        {{#if logged_in}}
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <button class="no-button" id="logout">Logout</button>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signUp">Sign Up</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

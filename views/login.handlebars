@@ -1,21 +1,35 @@
-<div class="row">
-  <div class="col justify-content-center">
-    <h2 class="login">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <input class="form-input" type="text" placeholder="Username" id="username-login" />
-      </div>
-      <div class="form-group">
-        <input class="form-input" type="password" placeholder="Password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">Login</button>
-      </div>
-      <div>
-        <a href="/signUp">Sign Up Instead</a>
-      </div>
-    </form>
+<div class="form-container">
+  <div class="login">
+    <div class="col justify-content-center">
+      <form class="form login-form">
+        <div class="form-group">
+          <label for="username-login">Your Username</label>
+          <div class="flex">
+            <div class="relative w-full">
+              <input type="text" placeholder="name@company.com" id="username-login" class="form-input" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password-login">Your Password</label>
+          <div class="flex">
+            <div class="relative w-full">
+              <input type="password" placeholder="***********" id="password-login" class="form-input" />
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">
+          <span class="flex items-center transition-all duration-200 rounded-md text-lg px-4 py-2">Sign In</span>
+          
+        </button>
+        
+          <div class="flex gap-2 text-small inline-elements">
+            <span>Don't have an account?</span>
+            <a class="text-blue-500" href="/signUp">Sign Up Instead</a>
+          </div>
+      </form>
+     
+    </div>
   </div>
 </div>
-
-<script src="./js/login.js"></script>
+<script type="module" src="/js/login.js"></script>
